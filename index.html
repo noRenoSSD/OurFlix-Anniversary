@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OurFlix Loading...</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sakura.js@1.1.0/lib/sakura.min.js"></script>
+    <link rel="stylesheet" href="css/style.css"> <style>
+        /* Kamu bisa pindahkan semua CSS ini ke dalam file css/style.css agar lebih rapi */
+        body {
+            font-family: 'Roboto', sans-serif;
+            overflow: hidden;
+            background-color: #000;
+            position: relative;
+        }
+        .splash-container {
+            position: relative;
+            text-align: center;
+            opacity: 1;
+            animation: fadeOutLeft 0.7s ease-in forwards;
+            animation-delay: 4.8s;
+            z-index: 10;
+        }
+        @keyframes fadeInScaleSlow {
+            0% { opacity: 0; transform: scale(0.6); filter: blur(5px); }
+            50% { opacity: 1; transform: scale(1.1); filter: blur(0px); }
+            100% { opacity: 1; transform: scale(1); filter: blur(0px); }
+        }
+        @keyframes slideUpFadeIn {
+            0% { opacity: 0; transform: translateY(100px); }
+            50% { opacity: 0.5; transform: translateY(-10px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeOutLeft {
+            0% { opacity: 1; transform: translateX(0); }
+            100% { opacity: 0; transform: translateX(-100vw); display: none; }
+        }
+        .ourflix-logo {
+            color: #e50914;
+            font-size: 7rem;
+            font-weight: 900;
+            text-shadow: 0 0 15px rgba(229, 9, 20, 0.7);
+            animation: fadeInScaleSlow 2.5s ease-out forwards;
+            animation-delay: 1.0s;
+            opacity: 0;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .edition-text {
+            color: #ffffff;
+            font-size: 2.5rem;
+            font-weight: 400;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+            animation: slideUpFadeIn 1.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+            animation-delay: 3.0s;
+            opacity: 0;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body class="bg-black flex items-center justify-center min-h-screen">
+
+    <div class="splash-container">
+        <h1 class="ourflix-logo">OurFlix</h1>
+        <p class="edition-text">1st Anniv EDITION</p> </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                new Sakura('body', {
+                    fallSpeed: 1.5,
+                    maxSize: 20,
+                    minSize: 10,
+                    colors: [
+                        { r: 255, g: 192, b: 203, a: 0.8 },
+                        { r: 255, g: 228, b: 225, a: 0.7 },
+                        { r: 255, g: 105, b: 180, a: 0.9 }
+                    ],
+                });
+            }, 1000);
+        });
+
+        const totalAnimationDuration = 5700; // Total durasi animasi sekitar 5.7 detik
+
+        setTimeout(() => {
+            // PENTING: Ubah /home menjadi home.html
+            window.location.href = 'home.html';
+        }, totalAnimationDuration);
+    </script>
+</body>
+</html>

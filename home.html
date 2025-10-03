@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OurFlix - A Special Day</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .header-bg {
+            opacity: 0;
+            animation: fade-in-out 15s infinite;
+        }
+        .header-bg-2 { animation-delay: 5s; }
+        .header-bg-3 { animation-delay: 10s; }
+        @keyframes fade-in-out {
+            0%, 100% { opacity: 0; }
+            10%, 33% { opacity: 1; }
+            43%, 100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <nav class="absolute top-0 left-0 w-full z-30 p-6 flex justify-between items-center">
+        <h1 class="text-3xl font-bold text-red-600">OurFlix</h1>
+        <div>
+            <a href="home.html" class="mx-2 hover:text-red-500">Home</a>
+            <a href="favorites.html" class="mx-2 hover:text-red-500">Our Favorites</a>
+            <a href="journey.html" class="mx-2 hover:text-red-500">Our Journey</a>
+            <a href="wishes.html" class="mx-2 hover:text-red-500">Good Wishes</a>
+            <a href="gallery.html" class="mx-2 hover:text-red-500">Photo Gallery</a>
+            <a href="secret.html" class="ml-4 bg-red-600 px-3 py-2 rounded">❤️ Secret Message</a>
+        </div>
+    </nav>
+
+    <header class="relative w-full h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center header-bg header-bg-1" style="background-image: url('images/bg_net.jpg');"></div>
+        <div class="absolute inset-0 bg-cover bg-center header-bg header-bg-2" style="background-image: url('images/bg_net2.jpg');"></div>
+        <div class="absolute inset-0 bg-cover bg-center header-bg header-bg-3" style="background-image: url('images/bg_net3.jpg');"></div>
+        
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent z-10"></div>
+        
+        <div class="relative max-w-2xl z-20 text-left px-8">
+            <h1 class="text-6xl font-bold mb-4">A Special Day for You, My Love</h1>
+            <p class="text-xl mb-8">
+                This is just a small gesture to celebrate our one year of relationship.
+                Hope you like this little corner of the internet, made just for us!
+            </p>
+            <div class="flex space-x-4">
+                <a href="journey.html" class="bg-white text-black px-8 py-3 rounded-md text-xl font-semibold flex items-center hover:bg-opacity-80 transition duration-300">
+                    Our Journey
+                </a>
+                <a href="secret.html" class="bg-gray-700 text-white px-8 py-3 rounded-md text-xl font-semibold flex items-center hover:bg-opacity-80 transition duration-300">
+                    Special Message
+                </a>
+            </div>
+        </div>
+    </header>
+
+</body>
+</html>
