@@ -9,11 +9,21 @@
     <link rel="stylesheet" href="css/style.css">
     <style>
         .swiper-button-next, .swiper-button-prev { color: #e50914 !important; }
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
     </style>
 </head>
 <body class="bg-black text-white">
 
-    <nav class="bg-black/50 backdrop-blur-sm sticky top-0 z-50 p-4 flex justify-between items-center">
+    <div id="particles-js"></div>
+
+    <nav class="sticky top-0 z-30 p-4 flex justify-between items-center bg-black/70 backdrop-blur-sm">
         <a href="home.html" class="text-3xl font-bold text-red-600">OurFlix</a>
         <div class="hidden md:flex items-center space-x-4">
             <a href="home.html" class="hover:text-red-500">Home</a>
@@ -25,23 +35,86 @@
         </div>
         <div class="md:hidden"><button id="menu-btn" class="text-white focus:outline-none"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button></div>
     </nav>
-    <div id="mobile-menu" class="hidden md:hidden bg-black/95 fixed top-0 left-0 w-full h-full z-40"><div class="flex flex-col items-center justify-center h-full space-y-8"><a href="home.html" class="text-2xl hover:text-red-500">Home</a><a href="favorites.html" class="text-2xl hover:text-red-500">Our Favorites</a><a href="journey.html" class="text-2xl hover:text-red-500">Our Journey</a><a href="wishes.html" class="text-2xl hover:text-red-500">Good Wishes</a><a href="gallery.html" class="text-2xl hover:text-red-500">Photo Gallery</a><a href="secret.html" class="mt-6 bg-red-600 px-6 py-3 rounded text-white flex items-center space-x-2"><span>❤️</span><span>Secret Message</span></a></div></div>
+    <div id="mobile-menu" class="hidden md:hidden bg-black/95 fixed top-0 left-0 w-full h-full z-50"><div class="flex flex-col items-center justify-center h-full space-y-8"><a href="home.html" class="text-2xl hover:text-red-500">Home</a><a href="favorites.html" class="text-2xl hover:text-red-500">Our Favorites</a><a href="journey.html" class="text-2xl hover:text-red-500">Our Journey</a><a href="wishes.html" class="text-2xl hover:text-red-500">Good Wishes</a><a href="gallery.html" class="text-2xl hover:text-red-500">Photo Gallery</a><a href="secret.html" class="mt-6 bg-red-600 px-6 py-3 rounded text-white flex items-center space-x-2"><span>❤️</span><span>Secret Message</span></a></div></div>
     
     <main class="container mx-auto px-4 sm:px-8 py-16">
         <h1 class="text-5xl font-bold text-red-600 mb-12 text-center">Our Favorite Things</h1>
 
         <section class="mb-20">
             <h2 class="text-3xl font-bold mb-6 text-white">Makanan Favorit Kita</h2>
-            <div class="swiper mySwiperFoods relative max-w-5xl mx-auto"><div class="swiper-wrapper"><div class="swiper-slide"><div class="bg-gray-800 rounded-lg overflow-hidden"><img src="https://source.unsplash.com/random/400x600?fried-rice" alt="Nasi Goreng" class="w-full h-64 object-cover"><div class="p-4"><h3 class="text-xl font-semibold">Nasi Goreng Gila</h3><p class="text-gray-400 text-sm">Penyelamat di kala lapar tengah malam.</p></div></div></div><div class="swiper-slide"><div class="bg-gray-800 rounded-lg overflow-hidden"><img src="https://source.unsplash.com/random/400x600?sweet-pancake" alt="Martabak" class="w-full h-64 object-cover"><div class="p-4"><h3 class="text-xl font-semibold">Martabak Coklat Keju</h3><p class="text-gray-400 text-sm">Tim garing di pinggir atau tim tebal di tengah?</p></div></div></div><div class="swiper-slide"><div class="bg-gray-800 rounded-lg overflow-hidden"><img src="https://source.unsplash.com/random/400x600?satay" alt="Sate" class="w-full h-64 object-cover"><div class="p-4"><h3 class="text-xl font-semibold">Sate Ayam</h3><p class="text-gray-400 text-sm">Aroma bakaran dan bumbu kacangnya tak terkalahkan.</p></div></div></div></div><div class="swiper-button-next"></div><div class="swiper-button-prev"></div></div>
+            <div class="swiper mySwiperFoods relative max-w-5xl mx-auto">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><div class="bg-gray-800 rounded-lg overflow-hidden">
+                        <img src="images/soto.jpeg" alt="Soto" class="w-full h-64 object-cover">
+                        <div class="p-4"><h3 class="text-xl font-semibold">Soto</h3>
+                        <p class="text-gray-400 text-sm">Ayukie suka karena light, dan relaxing.</p></div></div></div>
+                    <div class="swiper-slide"><div class="bg-gray-800 rounded-lg overflow-hidden">
+                        <img src="images/Gacoan.jpg" alt="Gacoan" class="w-full h-64 object-cover">
+                        <div class="p-4"><h3 class="text-xl font-semibold">Gacoan dan Udang Keju</h3>
+                        <p class="text-gray-400 text-sm">Suka polll sama gacoann</p></div></div></div>
+                    <div class="swiper-slide"><div class="bg-gray-800 rounded-lg overflow-hidden">
+                        <img src="images/Bu Nur.jpeg" alt="Bakaran" class="w-full h-64 object-cover">
+                        <div class="p-4"><h3 class="text-xl font-semibold">Bakaran Bu Nur</h3>
+                        <p class="text-gray-400 text-sm">Bu Nur adalah tempat paling nyaman untuk makan dan cerita.</p></div></div></div>
+                    <div class="swiper-slide"><div class="bg-gray-800 rounded-lg overflow-hidden">
+                        <img src="images/Baci.jpeg" alt="Baso Aci" class="w-full h-64 object-cover">
+                        <div class="p-4"><h3 class="text-xl font-semibold">Baso Aci</h3>
+                        <p class="text-gray-400 text-sm">Sangat wareg dan enak dan worth it.</p></div></div></div>
+                    <div class="swiper-slide"><div class="bg-gray-800 rounded-lg overflow-hidden">
+                        <img src="images/JajanPleburan.jpg" alt="Peleburan" class="w-full h-64 object-cover">
+                        <div class="p-4"><h3 class="text-xl font-semibold">Sego Bakar</h3>
+                        <p class="text-gray-400 text-sm">Sangat mantap kalau main kebawah.</p></div></div></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
         </section>
 
         <section class="mb-20">
             <h2 class="text-3xl font-bold mb-6 text-white">Warung & Kafe Langganan</h2>
-            <div class="swiper mySwiperWarung relative max-w-5xl mx-auto"><div class="swiper-wrapper"><div class="swiper-slide"><div class="bg-gray-800 rounded-lg overflow-hidden"><img src="https://source.unsplash.com/random/400x600?cozy-coffee-shop" alt="Kedai Kopi" class="w-full h-64 object-cover"><div class="p-4"><h3 class="text-xl font-semibold">Kedai Kopi Senja</h3><p class="text-gray-400 text-sm">Tempat ngobrol ngalor-ngidul sampai lupa waktu.</p></div></div></div><div class="swiper-slide"><div class="bg-gray-800 rounded-lg overflow-hidden"><img src="https://source.unsplash.com/random/400x600?meatball-soup" alt="Bakso" class="w-full h-64 object-cover"><div class="p-4"><h3 class="text-xl font-semibold">Bakso Pak Kumis</h3><p class="text-gray-400 text-sm">Selalu bikin kangen kalau lagi musim hujan.</p></div></div></div><div class="swiper-slide"><div class="bg-gray-800 rounded-lg overflow-hidden"><img src="https://source.unsplash.com/random/400x600?beach-seafood" alt="Seafood" class="w-full h-64 object-cover"><div class="p-4"><h3 class="text-xl font-semibold">Seafood Pinggir Pantai</h3><p class="text-gray-400 text-sm">Makan cumi bakar sambil dengerin suara ombak.</p></div></div></div></div><div class="swiper-button-next"></div><div class="swiper-button-prev"></div></div>
+            <div class="swiper mySwiperWarung relative max-w-5xl mx-auto">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><div class="bg-gray-800 rounded-lg overflow-hidden">
+                        <img src="images/Parjo.jfif" alt="Parjo" class="w-full h-64 object-cover">
+                        <div class="p-4"><h3 class="text-xl font-semibold">Parjo Sipodang</h3>
+                        <p class="text-gray-400 text-sm">Biasanya meng-nugas disini kalau misal ada tugas.</p></div></div></div>
+                    <div class="swiper-slide"><div class="bg-gray-800 rounded-lg overflow-hidden">
+                        <img src="images/Bunur.jfif" alt="Bunur" class="w-full h-64 object-cover">
+                        <div class="p-4"><h3 class="text-xl font-semibold">Penyetan Bu Nur</h3>
+                        <p class="text-gray-400 text-sm">Warung Hidden Gem yang semua makanannya enak.</p></div></div></div>
+                    <div class="swiper-slide"><div class="bg-gray-800 rounded-lg overflow-hidden">
+                        <img src="images/gacoan1.jfif" alt="Gacoan" class="w-full h-64 object-cover">
+                        <div class="p-4"><h3 class="text-xl font-semibold">Gacoan Patung Kuda</h3>
+                        <p class="text-gray-400 text-sm">Karena Reno sangat suka gacoan.</p></div></div></div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-6 text-white text-center">Streamer Favorit</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8 max-w-4xl mx-auto">
+                <div class="w-full md:w-1/3 bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col items-center p-6">
+                    <img src="images/windah.jpg" alt="Windah Basudara" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-red-600">
+                    <h3 class="text-2xl font-bold text-red-600 mb-2">Windah Basudara</h3>
+                    <p class="text-gray-300 text-center">Streamer yang selalu menghibur dengan tingkah lucunya dan sering tamat game-game sulit.</p>
+                    <a href="https://www.youtube.com/@WindahBasudara" target="_blank" class="mt-4 bg-red-600 px-4 py-2 rounded text-white hover:bg-red-700 transition duration-300">Lihat Channel</a>
+                </div>
+                <div class="text-6xl font-black text-red-600 md:text-8xl my-4 md:my-0">VS</div>
+                <div class="w-full md:w-1/3 bg-gray-800 rounded-lg overflow-hidden shadow-lg flex flex-col items-center p-6">
+                    <img src="images/vingeming.jpg" alt="Vin Geming" class="w-32 h-32 rounded-full object-cover mb-4 border-4 border-red-600">
+                    <h3 class="text-2xl font-bold text-red-600 mb-2">Vin Geming</h3>
+                    <p class="text-gray-300 text-center">Streamer kocak dengan gaya khasnya dan interaksi seru bersama penonton.</p>
+                    <a href="https://www.youtube.com/@VinGaming10" target="_blank" class="mt-4 bg-red-600 px-4 py-2 rounded text-white hover:bg-red-700 transition duration-300">Lihat Channel</a>
+                </div>
+            </div>
         </section>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3.1.0/tsparticles.bundle.min.js"></script>
+    
     <script>
         const createSwiper = (selector) => {
             return new Swiper(selector, {
@@ -57,6 +130,57 @@
         };
         createSwiper('.mySwiperFoods');
         createSwiper('.mySwiperWarung');
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            await tsParticles.load({
+                id: "particles-js",
+                options: {
+                    background: {
+                        color: { value: "#000000" }
+                    },
+                    fpsLimit: 60,
+                    particles: {
+                        number: {
+                            value: 150, // DIBUAT LEBIH BANYAK
+                            density: {
+                                enable: true,
+                            }
+                        },
+                        color: { value: "#e50914" },
+                        shape: { type: "circle" },
+                        opacity: {
+                            value: 0.5,
+                            random: true,
+                        },
+                        size: {
+                            value: 2,
+                            random: true,
+                        },
+                        links: {
+                            enable: false,
+                        },
+                        move: {
+                            enable: true,
+                            speed: 1, // DIBUAT LEBIH CEPAT
+                            direction: "none",
+                            outModes: "out"
+                        }
+                    },
+                    interactivity: {
+                        events: {
+                            onHover: {
+                                enable: true, // DI AKTIFKAN
+                                mode: "repulse" // Partikel menjauh dari kursor
+                            },
+                            onClick: {
+                                enable: false,
+                            }
+                        },
+                    },
+                    detectRetina: true,
+                },
+            });
+        });
     </script>
     <script src="js/script.js"></script>
 </body>

@@ -1,4 +1,6 @@
-/* File: css/style.css */
+/* ================================================= */
+/* FILE LENGKAP & FINAL UNTUK CSS/STYLE.CSS         */
+/* ================================================= */
 
 /* 1. Mengimpor font dari Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
@@ -26,11 +28,6 @@ html {
 }
 
 /* 5. Kustomisasi untuk garis timeline di journey.html versi mobile */
-/*
-   Di dalam journey.html, kita membuat garis timeline dengan div.
-   CSS ini memastikan posisi garisnya pas di sebelah kiri untuk tampilan mobile.
-   Untuk tampilan desktop, kita menggunakan class Tailwind.
-*/
 @media (max-width: 767px) { /* Ini berlaku untuk layar di bawah 768px (mobile) */
     .timeline-line {
         position: absolute;
@@ -43,4 +40,53 @@ html {
     .timeline-item {
         padding-left: 3.5rem; /* Memberi jarak antara teks dan garis */
     }
+}
+
+
+/* ================================================================= */
+/* 6. BAGIAN PENTING: KODE UNTUK MEMUNCULKAN FOTO BACKGROUND DI HOME  */
+/* ================================================================= */
+
+/* GAMBAR UNTUK MOBILE (DEFAULT) */
+/* Pastikan nama file ini sesuai dengan yang ada di folder /images */
+.header-bg-1 {
+    /* Ganti 'CorouselHome1-mobile.JPG' dengan nama file versi mobile jika ada, atau biarkan sama */
+    background-image: url('../images/Mangrovee.jpg');
+}
+.header-bg-2 {
+    background-image: url('../images/TaunBaru2.jpg');
+}
+.header-bg-3 {
+    background-image: url('../images/Mangrove3.jpg');
+}
+
+
+/* GANTI GAMBAR SAAT LAYAR LEBIH BESAR DARI 768px (TABLET/DESKTOP) */
+@media (min-width: 768px) {
+    .header-bg-1 {
+        /* Ganti 'CorouselHome1-desktop.JPG' dengan nama file versi desktop jika ada */
+        background-image: url('../images/CorouselHomeD1.JPG');
+    }
+    .header-bg-2 {
+        background-image: url('../images/CorouselHomeD2.JPG');
+    }
+    .header-bg-3 {
+        background-image: url('../images/CorouselHomeD3.JPG');
+    }
+}
+
+/* Styling untuk background di halaman Journey */
+.journey-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    opacity: 0.2; /* Tingkat transparansi */
+    filter: blur(3px); /* Efek buram */
+    transition: background-image 1.5s ease-in-out, opacity 1s ease-in-out; /* Transisi untuk gambar dan opacity */
 }
