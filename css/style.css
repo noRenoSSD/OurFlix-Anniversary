@@ -1,0 +1,46 @@
+/* File: css/style.css */
+
+/* 1. Mengimpor font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+/* 2. Menerapkan gaya dasar ke seluruh halaman */
+body {
+    /* Menerapkan font Roboto sebagai font utama */
+    font-family: 'Roboto', sans-serif;
+    
+    /* Membuat rendering teks lebih halus di browser */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 3. Membuat scrolling lebih mulus saat ada link internal */
+html {
+    scroll-behavior: smooth;
+}
+
+/* 4. Kustomisasi untuk slider di halaman favorites.html */
+.swiper-button-next,
+.swiper-button-prev {
+    /* Memberi warna merah pada panah navigasi slider */
+    color: #e50914 !important; /* !important untuk memastikan gaya ini menang */
+}
+
+/* 5. Kustomisasi untuk garis timeline di journey.html versi mobile */
+/*
+   Di dalam journey.html, kita membuat garis timeline dengan div.
+   CSS ini memastikan posisi garisnya pas di sebelah kiri untuk tampilan mobile.
+   Untuk tampilan desktop, kita menggunakan class Tailwind.
+*/
+@media (max-width: 767px) { /* Ini berlaku untuk layar di bawah 768px (mobile) */
+    .timeline-line {
+        position: absolute;
+        left: 1.5rem; /* 24px, sejajar dengan titik bulat */
+        height: 100%;
+        width: 4px;
+        background-color: #374151; /* Warna gray-700 */
+    }
+
+    .timeline-item {
+        padding-left: 3.5rem; /* Memberi jarak antara teks dan garis */
+    }
+}

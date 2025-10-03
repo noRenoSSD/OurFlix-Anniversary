@@ -9,51 +9,35 @@
 </head>
 <body class="bg-black text-white">
 
-    <nav class="bg-black/50 backdrop-blur-sm sticky top-0 z-50 p-6 flex justify-between items-center">
-        <h1 class="text-3xl font-bold text-red-600">OurFlix</h1>
-        <div>
-            <a href="home.html" class="mx-2 hover:text-red-500">Home</a>
-            <a href="favorites.html" class="mx-2 hover:text-red-500">Our Favorites</a>
-            <a href="journey.html" class="mx-2 hover:text-red-500">Our Journey</a>
-            <a href="wishes.html" class="mx-2 text-red-500 font-bold">Good Wishes</a>
-            <a href="gallery.html" class="mx-2 hover:text-red-500">Photo Gallery</a>
-            <a href="secret.html" class="ml-4 bg-red-600 px-3 py-2 rounded">❤️ Secret Message</a>
+    <nav class="bg-black/50 backdrop-blur-sm sticky top-0 z-50 p-4 flex justify-between items-center">
+        <a href="home.html" class="text-3xl font-bold text-red-600">OurFlix</a>
+        <div class="hidden md:flex items-center space-x-4">
+            <a href="home.html" class="hover:text-red-500">Home</a>
+            <a href="favorites.html" class="hover:text-red-500">Our Favorites</a>
+            <a href="journey.html" class="hover:text-red-500">Our Journey</a>
+            <a href="wishes.html" class="hover:text-red-500">Good Wishes</a>
+            <a href="gallery.html" class="hover:text-red-500">Photo Gallery</a>
+            <a href="secret.html" class="ml-4 bg-red-600 px-3 py-2 rounded text-white flex items-center space-x-2"><span>❤️</span><span>Secret Message</span></a>
         </div>
+        <div class="md:hidden"><button id="menu-btn" class="text-white focus:outline-none"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button></div>
     </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-black/95 fixed top-0 left-0 w-full h-full z-40"><div class="flex flex-col items-center justify-center h-full space-y-8"><a href="home.html" class="text-2xl hover:text-red-500">Home</a><a href="favorites.html" class="text-2xl hover:text-red-500">Our Favorites</a><a href="journey.html" class="text-2xl hover:text-red-500">Our Journey</a><a href="wishes.html" class="text-2xl hover:text-red-500">Good Wishes</a><a href="gallery.html" class="text-2xl hover:text-red-500">Photo Gallery</a><a href="secret.html" class="mt-6 bg-red-600 px-6 py-3 rounded text-white flex items-center space-x-2"><span>❤️</span><span>Secret Message</span></a></div></div>
 
-    <main class="container mx-auto px-8 py-16">
+    <main class="container mx-auto px-4 sm:px-8 py-16">
         <div class="text-center max-w-3xl mx-auto">
             <h1 class="text-5xl font-bold text-red-600 mb-6">Wishes & Hopes for Us</h1>
             <p class="text-lg text-gray-300">Here are some of my hopes and prayers for our future. For you, for me, and for us.</p>
         </div>
-
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
-            <div class="bg-yellow-200 text-gray-800 p-6 rounded-lg shadow-lg transform -rotate-2 hover:scale-105 hover:rotate-0 transition-transform duration-300">
-                <h3 class="font-bold text-2xl mb-3 border-b border-gray-400 pb-2">For Your Happiness</h3>
-                <p>Semoga kamu selalu dikelilingi kebahagiaan, menemukan sukacita bahkan di hal-hal kecil, dan senyummu tidak pernah pudar.</p>
-            </div>
-            <div class="bg-pink-200 text-gray-800 p-6 rounded-lg shadow-lg transform rotate-1 hover:scale-105 hover:rotate-0 transition-transform duration-300">
-                 <h3 class="font-bold text-2xl mb-3 border-b border-gray-400 pb-2">For Our Journey</h3>
-                 <p>Semoga perjalanan kita ke depan selalu lancar, saling menguatkan saat sulit, dan merayakan setiap kemenangan bersama.</p>
-            </div>
-            <div class="bg-green-200 text-gray-800 p-6 rounded-lg shadow-lg transform rotate-2 hover:scale-105 hover:rotate-0 transition-transform duration-300">
-                <h3 class="font-bold text-2xl mb-3 border-b border-gray-400 pb-2">For Our Dreams</h3>
-                <p>Semoga semua cita-cita kita, baik yang kita bangun sendiri maupun bersama, bisa terwujud satu per satu. I'll always support you.</p>
-           </div>
-            <div class="bg-blue-200 text-gray-800 p-6 rounded-lg shadow-lg transform -rotate-1 hover:scale-105 hover:rotate-0 transition-transform duration-300">
-                <h3 class="font-bold text-2xl mb-3 border-b border-gray-400 pb-2">For More Laughter</h3>
-                <p>Semoga hari-hari kita selalu dipenuhi canda tawa, lelucon receh, dan momen-momen konyol yang membuat kita lupa akan masalah.</p>
-            </div>
-            <div class="bg-purple-200 text-gray-800 p-6 rounded-lg shadow-lg transform rotate-2 hover:scale-105 hover:rotate-0 transition-transform duration-300">
-                 <h3 class="font-bold text-2xl mb-3 border-b border-gray-400 pb-2">For Our Health</h3>
-                 <p>Semoga kita berdua selalu diberi kesehatan, agar bisa terus menjalani petualangan-petualangan seru lainnya di masa depan.</p>
-            </div>
-            <div class="bg-orange-200 text-gray-800 p-6 rounded-lg shadow-lg transform -rotate-1 hover:scale-105 hover:rotate-0 transition-transform duration-300">
-                <h3 class="font-bold text-2xl mb-3 border-b border-gray-400 pb-2">For Us</h3>
-                <p>Most of all, I pray for us. May we continue to grow, to love, and to be each other's home. For many more years to come.</p>
-           </div>
+            <div class="bg-yellow-200 text-gray-800 p-6 rounded-lg shadow-lg transform -rotate-2 hover:scale-105 hover:rotate-0 transition-transform duration-300"><h3 class="font-bold text-2xl mb-3 border-b border-gray-400 pb-2">For Your Happiness</h3><p>Semoga kamu selalu dikelilingi kebahagiaan, menemukan sukacita bahkan di hal-hal kecil, dan senyummu tidak pernah pudar.</p></div>
+            <div class="bg-pink-200 text-gray-800 p-6 rounded-lg shadow-lg transform rotate-1 hover:scale-105 hover:rotate-0 transition-transform duration-300"><h3 class="font-bold text-2xl mb-3 border-b border-gray-400 pb-2">For Our Journey</h3><p>Semoga perjalanan kita ke depan selalu lancar, saling menguatkan saat sulit, dan merayakan setiap kemenangan bersama.</p></div>
+            <div class="bg-green-200 text-gray-800 p-6 rounded-lg shadow-lg transform rotate-2 hover:scale-105 hover:rotate-0 transition-transform duration-300"><h3 class="font-bold text-2xl mb-3 border-b border-gray-400 pb-2">For Our Dreams</h3><p>Semoga semua cita-cita kita, baik yang kita bangun sendiri maupun bersama, bisa terwujud satu per satu. I'll always support you.</p></div>
+            <div class="bg-blue-200 text-gray-800 p-6 rounded-lg shadow-lg transform -rotate-1 hover:scale-105 hover:rotate-0 transition-transform duration-300"><h3 class="font-bold text-2xl mb-3 border-b border-gray-400 pb-2">For More Laughter</h3><p>Semoga hari-hari kita selalu dipenuhi canda tawa, lelucon receh, dan momen-momen konyol yang membuat kita lupa akan masalah.</p></div>
+            <div class="bg-purple-200 text-gray-800 p-6 rounded-lg shadow-lg transform rotate-2 hover:scale-105 hover:rotate-0 transition-transform duration-300"><h3 class="font-bold text-2xl mb-3 border-b border-gray-400 pb-2">For Our Health</h3><p>Semoga kita berdua selalu diberi kesehatan, agar bisa terus menjalani petualangan-petualangan seru lainnya di masa depan.</p></div>
+            <div class="bg-orange-200 text-gray-800 p-6 rounded-lg shadow-lg transform -rotate-1 hover:scale-105 hover:rotate-0 transition-transform duration-300"><h3 class="font-bold text-2xl mb-3 border-b border-gray-400 pb-2">For Us</h3><p>Most of all, I pray for us. May we continue to grow, to love, and to be each other's home. For many more years to come.</p></div>
         </div>
     </main>
 
+    <script src="js/script.js"></script>
 </body>
 </html>

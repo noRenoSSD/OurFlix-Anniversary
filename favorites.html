@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OurFlix - Our Favorites</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .swiper-button-next, .swiper-button-prev { color: #e50914 !important; }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <nav class="bg-black/50 backdrop-blur-sm sticky top-0 z-50 p-4 flex justify-between items-center">
+        <a href="home.html" class="text-3xl font-bold text-red-600">OurFlix</a>
+        <div class="hidden md:flex items-center space-x-4">
+            <a href="home.html" class="hover:text-red-500">Home</a>
+            <a href="favorites.html" class="hover:text-red-500">Our Favorites</a>
+            <a href="journey.html" class="hover:text-red-500">Our Journey</a>
+            <a href="wishes.html" class="hover:text-red-500">Good Wishes</a>
+            <a href="gallery.html" class="hover:text-red-500">Photo Gallery</a>
+            <a href="secret.html" class="ml-4 bg-red-600 px-3 py-2 rounded text-white flex items-center space-x-2"><span>❤️</span><span>Secret Message</span></a>
+        </div>
+        <div class="md:hidden"><button id="menu-btn" class="text-white focus:outline-none"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button></div>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden bg-black/95 fixed top-0 left-0 w-full h-full z-40"><div class="flex flex-col items-center justify-center h-full space-y-8"><a href="home.html" class="text-2xl hover:text-red-500">Home</a><a href="favorites.html" class="text-2xl hover:text-red-500">Our Favorites</a><a href="journey.html" class="text-2xl hover:text-red-500">Our Journey</a><a href="wishes.html" class="text-2xl hover:text-red-500">Good Wishes</a><a href="gallery.html" class="text-2xl hover:text-red-500">Photo Gallery</a><a href="secret.html" class="mt-6 bg-red-600 px-6 py-3 rounded text-white flex items-center space-x-2"><span>❤️</span><span>Secret Message</span></a></div></div>
+    
+    <main class="container mx-auto px-4 sm:px-8 py-16">
+        <h1 class="text-5xl font-bold text-red-600 mb-12 text-center">Our Favorite Things</h1>
+
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-6 text-white">Makanan Favorit Kita</h2>
+            <div class="swiper mySwiperFoods relative max-w-5xl mx-auto"><div class="swiper-wrapper"><div class="swiper-slide"><div class="bg-gray-800 rounded-lg overflow-hidden"><img src="https://source.unsplash.com/random/400x600?fried-rice" alt="Nasi Goreng" class="w-full h-64 object-cover"><div class="p-4"><h3 class="text-xl font-semibold">Nasi Goreng Gila</h3><p class="text-gray-400 text-sm">Penyelamat di kala lapar tengah malam.</p></div></div></div><div class="swiper-slide"><div class="bg-gray-800 rounded-lg overflow-hidden"><img src="https://source.unsplash.com/random/400x600?sweet-pancake" alt="Martabak" class="w-full h-64 object-cover"><div class="p-4"><h3 class="text-xl font-semibold">Martabak Coklat Keju</h3><p class="text-gray-400 text-sm">Tim garing di pinggir atau tim tebal di tengah?</p></div></div></div><div class="swiper-slide"><div class="bg-gray-800 rounded-lg overflow-hidden"><img src="https://source.unsplash.com/random/400x600?satay" alt="Sate" class="w-full h-64 object-cover"><div class="p-4"><h3 class="text-xl font-semibold">Sate Ayam</h3><p class="text-gray-400 text-sm">Aroma bakaran dan bumbu kacangnya tak terkalahkan.</p></div></div></div></div><div class="swiper-button-next"></div><div class="swiper-button-prev"></div></div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-3xl font-bold mb-6 text-white">Warung & Kafe Langganan</h2>
+            <div class="swiper mySwiperWarung relative max-w-5xl mx-auto"><div class="swiper-wrapper"><div class="swiper-slide"><div class="bg-gray-800 rounded-lg overflow-hidden"><img src="https://source.unsplash.com/random/400x600?cozy-coffee-shop" alt="Kedai Kopi" class="w-full h-64 object-cover"><div class="p-4"><h3 class="text-xl font-semibold">Kedai Kopi Senja</h3><p class="text-gray-400 text-sm">Tempat ngobrol ngalor-ngidul sampai lupa waktu.</p></div></div></div><div class="swiper-slide"><div class="bg-gray-800 rounded-lg overflow-hidden"><img src="https://source.unsplash.com/random/400x600?meatball-soup" alt="Bakso" class="w-full h-64 object-cover"><div class="p-4"><h3 class="text-xl font-semibold">Bakso Pak Kumis</h3><p class="text-gray-400 text-sm">Selalu bikin kangen kalau lagi musim hujan.</p></div></div></div><div class="swiper-slide"><div class="bg-gray-800 rounded-lg overflow-hidden"><img src="https://source.unsplash.com/random/400x600?beach-seafood" alt="Seafood" class="w-full h-64 object-cover"><div class="p-4"><h3 class="text-xl font-semibold">Seafood Pinggir Pantai</h3><p class="text-gray-400 text-sm">Makan cumi bakar sambil dengerin suara ombak.</p></div></div></div></div><div class="swiper-button-next"></div><div class="swiper-button-prev"></div></div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const createSwiper = (selector) => {
+            return new Swiper(selector, {
+                loop: true,
+                slidesPerView: 1,
+                spaceBetween: 20,
+                navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+                breakpoints: {
+                    640: { slidesPerView: 2, spaceBetween: 30 },
+                    1024: { slidesPerView: 3, spaceBetween: 40 }
+                }
+            });
+        };
+        createSwiper('.mySwiperFoods');
+        createSwiper('.mySwiperWarung');
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
