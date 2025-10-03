@@ -41,13 +41,13 @@ html {
 /* 6. BAGIAN PENTING: KODE UNTUK MEMUNCULKAN FOTO BACKGROUND DI HOME  */
 /* ================================================================= */
 .header-bg-1 {
-    background-image: url('../images/FotoLaut1.jpg');
+    background-image: url('../images/FotoLaut6.jpg');
 }
 .header-bg-2 {
     background-image: url('../images/Mangrovee.jpg');
 }
 .header-bg-3 {
-    background-image: url('../images/CorouselHome3.JPG');
+    background-image: url('../images/Mangrove3.jpg');
 }
 
 @media (min-width: 768px) {
