@@ -1,5 +1,5 @@
 /* ================================================= */
-/* FILE LENGKAP & FINAL UNTUK CSS/STYLE.CSS         */
+/* FILE LENGKAP & FINAL SEBENARNYA UNTUK CSS/STYLE.CSS */
 /* ================================================= */
 
 /* 1. Mengimpor font dari Google Fonts */
@@ -7,15 +7,12 @@
 
 /* 2. Menerapkan gaya dasar ke seluruh halaman */
 body {
-    /* Menerapkan font Roboto sebagai font utama */
     font-family: 'Roboto', sans-serif;
-    
-    /* Membuat rendering teks lebih halus di browser */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* 3. Membuat scrolling lebih mulus saat ada link internal */
+/* 3. Membuat scrolling lebih mulus */
 html {
     scroll-behavior: smooth;
 }
@@ -23,59 +20,49 @@ html {
 /* 4. Kustomisasi untuk slider di halaman favorites.html */
 .swiper-button-next,
 .swiper-button-prev {
-    /* Memberi warna merah pada panah navigasi slider */
-    color: #e50914 !important; /* !important untuk memastikan gaya ini menang */
+    color: #e50914 !important;
 }
 
 /* 5. Kustomisasi untuk garis timeline di journey.html versi mobile */
-@media (max-width: 767px) { /* Ini berlaku untuk layar di bawah 768px (mobile) */
+@media (max-width: 767px) {
     .timeline-line {
         position: absolute;
-        left: 1.5rem; /* 24px, sejajar dengan titik bulat */
+        left: 1.5rem;
         height: 100%;
         width: 4px;
-        background-color: #374151; /* Warna gray-700 */
+        background-color: #374151;
     }
-
     .timeline-item {
-        padding-left: 3.5rem; /* Memberi jarak antara teks dan garis */
+        padding-left: 3.5rem;
     }
 }
-
 
 /* ================================================================= */
 /* 6. BAGIAN PENTING: KODE UNTUK MEMUNCULKAN FOTO BACKGROUND DI HOME  */
 /* ================================================================= */
-
-/* GAMBAR UNTUK MOBILE (DEFAULT) */
-/* Pastikan nama file ini sesuai dengan yang ada di folder /images */
 .header-bg-1 {
-    /* Ganti 'CorouselHome1-mobile.JPG' dengan nama file versi mobile jika ada, atau biarkan sama */
-    background-image: url('../images/Mangrovee.jpg');
+    background-image: url('../images/FotoLaut1.jpg');
 }
 .header-bg-2 {
-    background-image: url('../images/TaunBaru2.jpg');
+    background-image: url('../images/Mangrovee.jpg');
 }
 .header-bg-3 {
-    background-image: url('../images/Mangrove3.jpg');
+    background-image: url('../images/CorouselHome3.JPG');
 }
 
-
-/* GANTI GAMBAR SAAT LAYAR LEBIH BESAR DARI 768px (TABLET/DESKTOP) */
 @media (min-width: 768px) {
     .header-bg-1 {
-        /* Ganti 'CorouselHome1-desktop.JPG' dengan nama file versi desktop jika ada */
         background-image: url('../images/CorouselHomeD1.JPG');
     }
     .header-bg-2 {
-        background-image: url('../images/CorouselHomeD2.JPG');
+        background-image: url('../images/CorouselHomeD2.jpg');
     }
     .header-bg-3 {
-        background-image: url('../images/CorouselHomeD3.JPG');
+        background-image: url('../images/CorouselHomeD3.jpg');
     }
 }
 
-/* Styling untuk background di halaman Journey */
+/* 7. Styling untuk background di halaman Journey */
 .journey-background {
     position: fixed;
     top: 0;
@@ -86,7 +73,107 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     z-index: -1;
-    opacity: 0.2; /* Tingkat transparansi */
-    filter: blur(3px); /* Efek buram */
-    transition: background-image 1.5s ease-in-out, opacity 1s ease-in-out; /* Transisi untuk gambar dan opacity */
+    opacity: 0.2;
+    filter: blur(3px);
+    transition: background-image 1.5s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* 8. Logika untuk Popup & Animasi Wishes.html */
+@keyframes float-animation {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+.wish-card-animation {
+    animation: float-animation 6s ease-in-out infinite;
+}
+#page-wrapper.blur-active {
+    filter: blur(5px);
+    transform: scale(0.99);
+    transition: all 0.3s ease-in-out;
+}
+.popup-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; visibility: hidden;
+    transition: visibility 0s 0.3s, opacity 0.3s ease-in-out;
+}
+.popup-overlay:target {
+    opacity: 1; visibility: visible; transition-delay: 0s;
+}
+.popup-content {
+    transform: scale(0.9);
+    transition: transform 0.3s ease-in-out;
+}
+.popup-overlay:target .popup-content {
+    transform: scale(1);
+}
+
+/* 9. Animasi Transisi Roket */
+#rocket-transition {
+    position: fixed; left: 50%; transform: translateX(-50%);
+    z-index: 40; cursor: pointer; width: 100px; bottom: -240px;
+    color: #e50914;
+    transition: bottom 1.5s cubic-bezier(0.6, 0.04, 0.98, 0.335), 
+                transform 1.5s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+}
+#rocket-transition:hover {
+    bottom: -230px;
+    transition: bottom 0.3s ease-out;
+}
+#rocket-transition.launching {
+    bottom: 110vh;
+    transform: translateX(-50%) scale(1.2);
+}
+#page-wrapper.page-lifting-off {
+    transform: translateY(-100vh);
+    opacity: 0;
+    transition: transform 1.5s cubic-bezier(0.4, 0, 1, 1), 
+                opacity 1s ease-in;
+}
+
+/* 10. Efek Kursor dengan Buntut Putih */
+body {
+    cursor: none !important;
+}
+.cursor-follower {
+    position: fixed; top: 0; left: 0; width: 10px; height: 10px;
+    background-color: white; border-radius: 50%;
+    z-index: 9999; pointer-events: none;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference;
+}
+
+/* 11. Style & Animasi Flip Card untuk Galeri */
+.card-container {
+    background-color: #111827;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+.flip-card {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.flip-card.is-flipping {
+    transform: rotateY(180deg);
+}
+.gallery-image-slot {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.375rem;
+    backface-visibility: hidden;
+}
+
+/* ========================================================= */
+/* BAGIAN 12: LOGIKA GRID CERDAS (DENSE) UNTUK GALERI       */
+/* ========================================================= */
+.grid-dense {
+    grid-auto-flow: dense;
 }
